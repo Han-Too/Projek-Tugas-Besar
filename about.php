@@ -52,7 +52,7 @@
                         <h4><strong>Question</strong></h4>
                         <p class="text-faded mb-0">I mustache you a question...</p><br>
                     </div></tr>
-                    <tr><button class="btn btn-warning btn-lg btn-block btn-outline-info" ><a href="index.php"> Kembali</a> </button></tr>
+                    <tr><button class="btn btn-warning btn-lg btn-block btn-outline-info" ><a href="index.php" class="text-light"> Kembali</a> </button></tr>
                 </div>
                 </table>
             </div>

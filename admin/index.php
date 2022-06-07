@@ -6,11 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
+        <link rel="icon" type="image/x-icon" href="https://cdn0.iconfinder.com/data/icons/learning-icons-rounded/110/Books-512.png" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 	<title>Halaman Admin </title>
 </head>
-<body>
+<body  style="background-color: #ecb807;">
 	<?php 
 	session_start();
  
@@ -21,15 +22,18 @@
 	
 	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.php">E-Perpustakaan</a>
+            <img src="https://cdn0.iconfinder.com/data/icons/learning-icons-rounded/110/Books-512.png" alt="" width="40" height="40" class="img-responsive " />
+            <a class="navbar-brand ps-3" href="index.php">
+             E-Perpustakaan</a>
+            
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <!-- Navbar Search-->
+            Navbar Search
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
+                <!-- <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
                     <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
+                </div> -->
             </form>
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
@@ -56,25 +60,41 @@
                             </a>
                             <div class="sb-sidenav-menu-heading">Kelola</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-address-card"></i></div>
                                 Pengguna
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">User</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Admin</a>
+                                <a class="nav-link" href="kelola/admin.php">
+                                    <div class="sb-nav-link-icon"><i class="fa-solid fa-user-gear"></i></div>   
+                                    Admin</a>
+                                    <a class="nav-link" href="kelola/user.php">
+                                    <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></div>    
+                                    User</a>
                                 </nav>
                             </div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                E-Book
+                           
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="true" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                                Kelola
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="kelola/ebook.php">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+                                    E-Books</a>
+                                    <a class="nav-link" href="kelola/video.php">   
+                                    <div class="sb-nav-link-icon"><i class="fa-solid fa-video"></i></div>    
+                                    Videos</a>
+                                </nav>
+                            </div>
+                            <!-- <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Video
+                                    <div class="sb-nav-link-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+                                    E-Books
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
@@ -85,7 +105,8 @@
                                         </nav>
                                     </div>
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Error
+                                    <div class="sb-nav-link-icon"><i class="fa-solid fa-video"></i></div>    
+                                    Videos
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
@@ -96,7 +117,7 @@
                                         </nav>
                                     </div>
                                 </nav>
-                            </div>
+                            </div> -->
                             <div class="sb-sidenav-menu-heading">Addons</div>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
@@ -115,12 +136,16 @@
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid px-4">
-                        <h1 class="mt-4 text-center">Welcome <?php echo $_SESSION['username']; ?> di Halaman Administrator</h1>
-			<div class="bg-info pt-3 ">
-	<p class="h5 text-center text-light">Jam Sekarang</p>			
+                <div class="bg-info text-light h5">
+                <marquee behavior="scroll" direction="left">Hallo <?php echo $_SESSION['username'] ?>, Bagaimana Kabar Hari Ini?</marquee>
+                </div>
+                <div class="container-fluid mt-1">
+                        
+                        <h1 class="mt-4 text-center text-light">Welcome <?php echo $_SESSION['username']; ?> di Halaman Administrator</h1>
+                        <hr color="black" size="10">
+			<div class="pt-3 ">		
 <div>
+  
 	<style>
 		* {
 	font-family: 'Montserrat', sans-serif;
@@ -135,7 +160,17 @@
 	
 }
 	</style>
-        <p id="clock"></p>
+     </div>
+</div>
+                        <ol class="breadcrumb mb-4">
+                            <!-- <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Sidenav Light</li> -->
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                            <div class="text-center">
+                                <p class="h3 text-center text-primary">Jam Sekarang</p>	
+                                <p id="clock"></p>
 	<script>
 	   setInterval(customClock, 500);
 	   function customClock() {
@@ -148,19 +183,12 @@
 	       
 	   }
 	   
-	</script> </div>
+	</script>
+    
 </div>
-                        <ol class="breadcrumb mb-4">
-                            <!-- <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Sidenav Light</li> -->
-                        </ol>
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <div class="text-center">
-	<p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda telah login sebagai <b><?php echo $_SESSION['role']; ?></b>.</p>
-	<a href="..\logout.php">LOGOUT</a></div>
                             </div>
                         </div>
+                        <hr color="black" size="10" class="mt-5">
                     </div>
 	
  

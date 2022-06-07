@@ -1,4 +1,5 @@
 <?php 
+    $title = "Login";
     include "head.php";
 
 ?>
